@@ -16,7 +16,7 @@ const RedirectPage = () => {
       if (code) {
         try {
           const response = await fetch(
-            "http://192.168.1.121:3000/google/redirect",
+            "http://192.168.1.201:3000/google/redirect",
             {
               method: "POST",
               headers: {

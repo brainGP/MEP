@@ -1,5 +1,3 @@
-// app/page.js
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -16,6 +14,7 @@ const HomePage = () => {
       setUser(JSON.parse(storedUser));
     }
   }, []);
+  // http://192.168.1.121:3000/user/hi
 
   const checkAuthToken = async () => {
     const accessToken = localStorage.getItem("accessToken");
@@ -25,7 +24,7 @@ const HomePage = () => {
     }
 
     try {
-      const response = await axios.get("http://192.168.1.121:3000/user/hi", {
+      const response = await axios.get("http://192.168.1.201:3000/user/hi", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
